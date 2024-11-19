@@ -1,0 +1,47 @@
+---
+import Day1 from "../components/Day1.astro";
+import Layout from "../layouts/layout.astro";
+const days = Array.from({ length: 362 }, (_, i) => i + 1);
+---
+
+<Layout title="Home" description="365 days of UI">
+    <main>
+        <section class="min-h-screen max-w-2xl mx-auto">
+            <div class="pt-4">
+                <h1>365 days of UI</h1>
+                <p>
+                    This project is inspired by <a
+                        class="underline"
+                        href="https://www.figma.com/community/file/1434983318290209664"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        366 design concepts</a
+                    > by <a
+                        class="underline"
+                        href="https://x.com/sovpal/status/1841212238268358720"
+                        target="_blank"
+                        rel="noopener noreferrer">@svopal</a
+                    >
+                </p>
+            </div>
+            <div class="mt-10">
+                <div
+                    class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5"
+                >
+                    <div class="col-span-1">
+                        <Day1 />
+                    </div>
+
+                    {
+                        days.map((day) => (
+                            <div class="col-span-1">
+                                <div class="rounded-xl aspect-square bg-[#F2F2F2]" />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
