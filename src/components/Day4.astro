@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import bar from "../images/Bar.png";
+import sideL from "../images/SideL.png";
+import sideR from "../images/SideR.png";
+---
+
+<div class="rounded-xl h-full bg-[#FFFFFF] overflow-hidden">
+    <div class="flex items-center gap-2 h-full">
+        <Image src={sideL} alt="bar illustration" class="w-10 h-24" />
+        <Image src={bar} alt="bar illustration" class="w-24" />
+        <Image src={sideR} alt="bar illustration" class="w-10 h-24" />
+    </div>
+</div>
