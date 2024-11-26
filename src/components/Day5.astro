@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import AirplayIcon from "../images/AirplayIcon.png";
+import PlayIcon from "../images/PlayIcon.png";
+import PreviousIcon from "../images/PreviousIcon.png";
+import NextIcon from "../images/NextIcon.png";
+import OverlayImage from "../images/overlay.png";
+import TotalProgress from "../images/TotalProgress.png";
+import CurrentProgress from "../images/CurrentProgress.png";
+---
+
+<section
+    class="rounded-xl relative h-full bg-[url('./src/images/music.png')] bg-center bg-cover"
+>
+    <div class="flex justify-end pt-3 pr-2">
+        <Image src={AirplayIcon} alt="Airplay illustration" class="w-10 h-10" />
+    </div>
+
+    <div class="text-white text-center mt-3 z-10 relative">
+        <h1>IGOR'S THEME</h1>
+        <p>Tyler, The Creator</p>
+    </div>
+
+    <div class="flex items-center justify-between px-4 z-10 relative mt-2">
+        <Image
+            src={PreviousIcon}
+            alt="PreviousIcon illustration"
+            class="w-8 h-8"
+        />
+        <Image src={PlayIcon} alt="PlayIcon illustration" class="w-8 h-8" />
+        <Image src={NextIcon} alt="NextIcon illustration" class="w-8 h-8" />
+    </div>
+
+    <div class="flex z-10 relative mt-3 px-4 overflow-hidden">
+        <Image
+            src={CurrentProgress}
+            alt="Current Progress illustration"
+            class="w-1/2 filter brightness-0 invert"
+        />
+        <Image
+            src={TotalProgress}
+            alt="TotalProgress illustration"
+            class="w-1/2"
+        />
+    </div>
+
+    <div class="absolute bottom-1 left-0 right-0 flex justify-center">
+        <Image
+            src={OverlayImage}
+            alt="Overlay illustration"
+            class="w-full h-full"
+        />
+    </div>
+</section>
