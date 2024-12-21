@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import WaterDrop from "../images/Waterdropicon.png";
+import Rectangle27 from "../images/Rectangle27.png";
+import Rectangle31 from "../images/Rectangle31.png";
+---
+
+<section
+    class="rounded-xl flex flex-col justify-between h-full bg-blue-100 py-4"
+>
+    <div class="px-4 flex justify-between">
+        <Image
+            src={WaterDrop}
+            alt="Water Drop illustration"
+            class="w-6 h-full"
+        />
+        <h1 class="text-[#64D2FF] leading-none text-right">
+            Drink more <br /> water
+        </h1>
+    </div>
+    <div class="flex gap-3 pl-4 overflow-hidden">
+        <Image src={Rectangle27} alt="Cup illustration" class="w-6 h-full" />
+        <Image src={Rectangle27} alt="Cup illustration" class="w-6 h-full" />
+        <Image src={Rectangle31} alt="Cup illustration" class="w-6 h-full" />
+        <Image src={Rectangle31} alt="Cup illustration" class="w-6 h-full" />
+        <Image src={Rectangle31} alt="Cup illustration" class="w-6 h-full" />
+    </div>
+    <div class="flex items-end gap-2 px-4">
+        <h1 class="text-[#1C1C1E] font-semibold text-3xl">2.5</h1>
+        <p class="text-[#7F7F7F] text-sm font-semibold pb-[2px]">CUPS</p>
+    </div>
+</section>
